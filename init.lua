@@ -1,3 +1,3 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-require("snippets")
+require("luasnip.loaders.from_lua").load({ paths = { "~/snippets" } })
