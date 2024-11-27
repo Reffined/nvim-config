@@ -6,3 +6,7 @@
 vim.keymap.set("n", "<leader>h", function()
   require("luasnip.loaders").edit_snippet_files()
 end, { desc = "Edit Snippets" })
+
+vim.keymap.set("n", "<C-/>", function()
+  Snacks.terminal()
+end, { desc = "terminal (cwd)" })
