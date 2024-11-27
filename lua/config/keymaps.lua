@@ -11,3 +11,7 @@ vim.keymap.set("n", "<c-x>", function()
   Snacks.terminal()
 end, {})
 vim.keymap.set("t", "<c-x>", "<cmd>close<cr>", {})
+
+vim.keymap.del("n", "<leader>e")
+
+vim.keymap.set("n", "<leader>e", "<leader>E", { desc = "tree view (cwd)", remap = true })
