@@ -24,3 +24,5 @@ lspconfig.helm_ls.setup({
     },
   },
 })
+
+vim.api.nvim_set_keymap('n', '<C-m>', ':delm!<CR>', {})
