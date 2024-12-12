@@ -26,3 +26,4 @@ lspconfig.helm_ls.setup({
 })
 
 vim.api.nvim_set_keymap('n', '<C-m>', ':delm!<CR>', {})
+vim.api.nvim_set_keymap('n', '<leader>m', ':MarkdownPreview<CR>', {})
