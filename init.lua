@@ -3,30 +3,8 @@ require("config.lazy")
 require("luasnip.loaders.from_lua").load({ paths = { "~/snippets" } })
 local lspconfig = require("lspconfig")
 
-lspconfig.helm_ls.setup({
-  settings = {
-    ["helm-ls"] = {
-      valueFiles = {
-        mainValueFile = "values.yaml",
-      },
-      yamlls = {
-        enabled = true,
-        path = "yaml-language-server",
-        config = {
-          schemas = {
-            ["file:///home/wispo/.datree/crdSchemas/wcd.wispo/desktopimage_v1.json"] = "*desktopimage*.yaml",
-            kubernetes = "templates/**",
-          },
-          completion = true,
-          hover = true,
-        },
-      },
-    },
-  },
-})
-require("lspconfig").omnisharp.setup({
+lspconfig.omnisharp.setup({
   cmd = { "OmniSharp" },
-
   settings = {
     FormattingOptions = {
       -- Enables support for reading code style, naming convention and analyzer
@@ -47,7 +25,7 @@ require("lspconfig").omnisharp.setup({
     },
     RoslynExtensionsOptions = {
       -- Enables support for roslyn analyzers, code fixes and rulesets.
-      EnableAnalyzersSupport = nil,
+      EnableAnalyzersSupport = true,
       -- Enables support for showing unimported types and unimported extension
       -- methods in completion lists. When committed, the appropriate using
       -- directive will be added at the top of the current file. This option can
@@ -57,7 +35,7 @@ require("lspconfig").omnisharp.setup({
       EnableImportCompletion = true,
       -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
       -- true
-      AnalyzeOpenDocumentsOnly = nil,
+      AnalyzeOpenDocumentsOnly = true,
     },
     Sdk = {
       -- Specifies whether to include preview versions of the .NET SDK when
