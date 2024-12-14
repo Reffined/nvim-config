@@ -82,9 +82,9 @@ return {
       },
       sources = cmp.config.sources({
         { name = "nvim_lsp" }, -- LSP completions
-        { name = "buffer" }, -- Buffer completions
-        { name = "path" }, -- File path completions
-        { name = "luasnip" }, -- Add LuaSnip as a source
+        { name = "buffer" },   -- Buffer completions
+        { name = "path" },     -- File path completions
+        { name = "luasnip" },  -- Add LuaSnip as a source
       }),
       formatting = {
         format = function(entry, item)
