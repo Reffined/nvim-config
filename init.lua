@@ -68,3 +68,4 @@ require("lspconfig").omnisharp.setup({
 })
 vim.api.nvim_set_keymap("n", "<C-m>", ":delm!<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>m", ":MarkdownPreview<CR>", {})
+vim.api.nvim_set_keymap("i", "<C-o>", "<CR>", {})
