@@ -11,8 +11,8 @@ return {
             format = {
               indentSize = 2,
               tabSize = 2,
-              convertTabToSpaces = true
-            }
+              convertTabToSpaces = true,
+            },
           },
           javascript = {
             format = {
@@ -20,9 +20,9 @@ return {
               tabSize = 2,
               convertTabsToSpaces = true,
             },
-          }
-        }
-      }
-    }
-  }
+          },
+        },
+      },
+    },
+  },
 }
